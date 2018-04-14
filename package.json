@@ -1,0 +1,19 @@
+{
+  "name": "dashboardsandbox",
+  "version": "1.0.0",
+  "description": "dashboard exercise",
+  "main": "app.js",
+  "scripts": {
+	"start": "node app.js"
+  },
+  "keywords": [
+    "R0I"
+  ],
+  "author": "Roi Papo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "cors": "~2.8.3",
+    "body-parser": "~1.17.2"
+  }
+}
