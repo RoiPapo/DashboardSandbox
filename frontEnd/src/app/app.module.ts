@@ -7,6 +7,7 @@ import { ClearWebComponent } from './clear-web/clear-web.component';
 import { DarkWebComponent } from './dark-web/dark-web.component';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';  
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -20,7 +21,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     CommonModule,
-    HttpModule
+    HttpModule,
+    ChartsModule
   ],
   providers: [RequestService],
   bootstrap: [AppComponent]

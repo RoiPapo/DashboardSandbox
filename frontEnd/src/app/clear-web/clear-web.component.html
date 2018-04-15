@@ -1,9 +1,9 @@
-<div class="grid-container">
+<div class="grid-container" *ngIf="ClearWebData">
   <div class="grid-item-logo">
     <img src="{{imgDir}}clear-web.png">
   </div>
-  <div class="grid-item">
-    <table *ngIf="ClearWebData">
+  <div  class="grid-item">
+    <table >
       <tr>
         <th>TYPES</th>
         <th></th>
@@ -59,11 +59,27 @@
   <div class="grid-item">
     <table>
       <th>SEVERITIES</th>
+    <tr>
+      <div class="doughnut">
+          <canvas baseChart
+                      [labels]="doughnutChartLabels"
+                      [datasets]="chartDatasets"
+                      [chartType]="doughnutChartType"
+                      [colors]="colors"
+                      [options]="doughnutChartOptions"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+                      
+        </div>
+      </tr>
     </table>
   </div>
   <div class="grid-item">
     <table>
       <th>SOURCES</th>
+      <tr>
+
+      </tr>
     </table>
   </div>
 </div>
