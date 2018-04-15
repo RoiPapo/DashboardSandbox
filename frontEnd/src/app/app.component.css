@@ -1,0 +1,23 @@
+body{
+    margin-left: -7px;
+    margin-top: -7px;
+    margin-right: -7px;
+}
+.header {
+    overflow: hidden;
+    background-color: #1a3951;
+    max-height: 63px;
+    margin-bottom: 0px;
+    width: 100%;
+
+  }
+  .container{
+    margin: auto;
+    background-color: #1c5079;
+    padding: 70px;
+    position: absolute;
+    top: 64px;
+    bottom: 0px;
+    left:110px;
+    width: 77%;
+  }

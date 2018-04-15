@@ -18,5 +18,5 @@ app.get('/api', function (req, res) {
 
 
 app.listen(port, () => {
-    console.log("server Is ON! :D");
+    console.log("server Is ON :D");
 });
