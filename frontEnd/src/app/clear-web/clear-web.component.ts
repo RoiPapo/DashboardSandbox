@@ -7,9 +7,13 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 })
 export class ClearWebComponent implements OnInit {
 
- @Input() 
- ClearWebData:{};
-  constructor() { }
+  @Input()
+
+  ClearWebData: {};
+  imgDir: string = "../assets/img/";
+  constructor() {
+    
+   }
 
   ngOnInit() {
 

@@ -18,24 +18,48 @@ th {
     padding-right:200px;
     padding-bottom: 5px;
     font-size: 12px;
-    vertical-align: inherit;
     font-weight: lighter;
     text-align: center;
     background-color:#203c52;
 }
-.grid-container {
+tr td{
+    border-bottom:1pt solid #203e56;
+}
+td {
+    vertical-align: top;
+    padding-left: 20px;
+    padding-top: 15px;  
+}
+ .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: fit-content;
-    padding: 10px;
+    padding-bottom: 2px;
   }
   .grid-item {
     background-color:#214a6b;
     border-left: 10px solid #1c5079;
     border-right: 10px solid #1c5079;
+    margin-bottom: 29px;
+
   }
   .grid-item-logo {
     background-color:#1e5078;
   }
 
-  
+  .tableNumers{
+    font-size: 16px;
+    font-weight: bold;
+    display:-webkit-inline-box;
+    vertical-align: top;
+}
+  .icon{
+    vertical-align: top;
+    display:-webkit-inline-box;
+}
+  .tableText{
+    white-space: pre-line;
+    display: block;
+    padding-left: 47px;
+    margin-top: -16px;
+}

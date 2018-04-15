@@ -1,23 +1,69 @@
 <div class="grid-container">
   <div class="grid-item-logo">
-    <img src="../../assets/img/clear-web.png">
+    <img src="{{imgDir}}clear-web.png">
   </div>
   <div class="grid-item">
-    <table>
+    <table *ngIf="ClearWebData">
       <tr>
         <th>TYPES</th>
         <th></th>
       </tr>
       <tr>
-        <td><div  *ngIf="ClearWebData" class="text" > {{ClearWebData.Types.AttackIndication}}  </div></td>
-        <td>$100</td>
+        <td>
+          <img class="icon" src="{{imgDir}}Icon1.png">
+          <div class="tableNumers"> {{ClearWebData.Types.AttackIndication}}</div>
+          <div class="tableText">ATTACK 
+            INDICATION
+          </div>
+        </td>
+        <td>
+          <img class="icon" src="{{imgDir}}Icon4.png">
+          <div class="tableNumers"> {{ClearWebData.Types.DataLeakage}}</div>
+          <div class="tableText">DATA 
+            LEAKAGE
+          </div>
+        </td>
       </tr>
       <tr>
-        <td>February</td>
-        <td>$80</td>
+        <td>
+          <img class="icon" src="{{imgDir}}Icon2.png">
+          <div class="tableNumers"> {{ClearWebData.Types.Phishing}}</div>
+          <div class="tableText">PHISHING
+          </div>
+        </td>
+        <td>
+          <img class="icon" src="{{imgDir}}Icon5.png">
+          <div class="tableNumers"> {{ClearWebData.Types.BrandSecurity}}</div>
+          <div class="tableText">BRAND 
+            SECURITY
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:0px">
+          <img class="icon" src="{{imgDir}}Icon3.png">
+          <div class="tableNumers"> {{ClearWebData.Types.ExploitableData}}</div>
+          <div class="tableText">EXPLOITABLE 
+            DATA™
+          </div>
+        </td>
+        <td style="border:0px">
+          <img class="icon" src="{{imgDir}}Icon6.png">
+          <div class="tableNumers"> {{ClearWebData.Types.vip}}</div>
+          <div class="tableText">VIP
+          </div>
+        </td>
       </tr>
     </table>
   </div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
+  <div class="grid-item">
+    <table>
+      <th>SEVERITIES</th>
+    </table>
+  </div>
+  <div class="grid-item">
+    <table>
+      <th>SOURCES</th>
+    </table>
+  </div>
 </div>
