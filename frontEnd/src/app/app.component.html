@@ -3,8 +3,9 @@
         <app-header></app-header>
     </div>
     <div class="container">
-        <app-clear-web></app-clear-web>
-        <app-dark-web></app-dark-web>
-        <!-- {{data.ClearWeb.Types.AttackIndication}} -->
+        <app-clear-web [ClearWebData]="ClearWebData"></app-clear-web>
+        <app-dark-web [DarkWebData]="DarkWebData"></app-dark-web>
+      
+        
     </div>
 </body>

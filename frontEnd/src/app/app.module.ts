@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ClearWebComponent } from './clear-web/clear-web.component';
 import { DarkWebComponent } from './dark-web/dark-web.component';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';  
 
 
 
@@ -18,6 +19,7 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpModule
   ],
   providers: [RequestService],

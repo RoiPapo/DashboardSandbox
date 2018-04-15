@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-dark-web',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dark-web.component.css']
 })
 export class DarkWebComponent implements OnInit {
+
+  @Input() 
+  DarkWebData:{};
 
   constructor() { }
 

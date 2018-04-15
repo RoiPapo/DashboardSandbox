@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from './requests.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,9 @@ import { RequestService } from './requests.service';
 })
 export class AppComponent implements OnInit {
 
-  data: {};
+  ClearWebData: {};
+  DarkWebData: {};
+
 
   constructor(private requestService: RequestService) {
   }
@@ -16,21 +19,26 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.loadData();
-    console.log(this.data);
+
   }
 
   loadData() {
     this.requestService.getData()
       .subscribe(
         data => {
-          this.data = data;
-          console.log(this.data)
+          this.ParseJson(data)
+          console.log(data);
         },
 
         err => {
           console.log(err)
         }
       )
+  }
+
+  ParseJson(data) {
+    this.ClearWebData = data["ClearWeb"];
+    this.DarkWebData = data["DarkWeb"];
   }
 
 }

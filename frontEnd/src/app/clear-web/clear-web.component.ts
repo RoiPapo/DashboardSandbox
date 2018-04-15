@@ -5,13 +5,14 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
   templateUrl: './clear-web.component.html',
   styleUrls: ['./clear-web.component.css']
 })
-export class ClearWebComponent implements AfterViewInit {
+export class ClearWebComponent implements OnInit {
 
- @Input() data:{};
+ @Input() 
+ ClearWebData:{};
   constructor() { }
 
-  ngAfterViewInit() {
-    console.log(this.data);
+  ngOnInit() {
+
   }
 
 }
