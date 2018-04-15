@@ -1,4 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     background-color: #192934;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:white;
 }
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-color: grey;
+}
+th {
+    display: table-cell;
+   padding-top: 5px;
+    padding-left:20px;
+    padding-right:200px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    vertical-align: inherit;
+    font-weight: lighter;
+    text-align: center;
+    background-color:#203c52;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: fit-content;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color:#214a6b;
+    border-left: 10px solid #1c5079;
+    border-right: 10px solid #1c5079;
+  }
+  .grid-item-logo {
+    background-color:#1e5078;
+  }
+
+  
