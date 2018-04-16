@@ -6,7 +6,7 @@ a Dashboard exercise from Intsights :D
 2) open CMD and go to DashboardSandbox\frontEnd
 3) run 
 > -npm install 
-4) wait until it installs all the node_Modules dependencies 
+4) wait until it installs all the Angular node_Modules dependencies 
 5) go to the projects main folder DashboardSandbox\
 6) run
 >npm start
