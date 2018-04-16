@@ -6,7 +6,7 @@ import { Color } from 'ng2-charts';
   templateUrl: './clear-web.component.html',
   styleUrls: ['./clear-web.component.css']
 })
-export class ClearWebComponent  {
+export class ClearWebComponent {
 
   @Input()
 
@@ -17,13 +17,13 @@ export class ClearWebComponent  {
   // Doughnut
   public doughnutChartLabels: string[] = ['High', 'Medium', 'low'];
   public doughnutChartType: string = 'doughnut';
-  public colors: any[]= [{ borderWidth:0, backgroundColor: ["#41b0d5", "#f3ab10", "#d54141", "#a4add3"] } ];
+  public colors: any[] = [{ borderWidth: 0, backgroundColor: ["#41b0d5", "#f3ab10", "#d54141", "#a4add3"] }];
   public doughnutChartOptions: any = {
-    borderWidth:0,
+    borderWidth: 0,
     cutoutPercentage: 88,
     legend: {
       display: false
-     }
+    }
   }
   // events
   public chartClicked(e: any): void {

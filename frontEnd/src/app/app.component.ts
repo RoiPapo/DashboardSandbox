@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   ClearWebData: {};
   DarkWebData: {};
-  
+
 
   constructor(private requestService: RequestService) {
   }
@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
       .subscribe(
         data => {
           this.ParseJson(data)
-          console.log(data);
         },
 
         err => {

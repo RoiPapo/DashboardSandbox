@@ -1,9 +1,9 @@
-<div class="grid-container">
+<div class="grid-container" *ngIf="DarkWebData">
     <div class="grid-item-logo">
-      <img src="{{imgDir}}dark-web.png">
+      <img src="{{imgDir}}clear-web.png">
     </div>
     <div class="grid-item">
-      <table *ngIf="DarkWebData">
+      <table class="types">
         <tr>
           <th>TYPES</th>
           <th></th>
@@ -34,28 +34,69 @@
           <td>
             <img class="icon" src="{{imgDir}}Icon5.png">
             <div class="tableNumers"> {{DarkWebData.Types.BrandSecurity}}</div>
-            <div class="tableText">BRAND
-               SECURITY
+            <div class="tableText">BRAND 
+              SECURITY
             </div>
           </td>
         </tr>
-        <tr >
-            <td style="border:0px"> 
-              <img class="icon" src="{{imgDir}}Icon3.png">
-              <div class="tableNumers"> {{DarkWebData.Types.ExploitableData}}</div>
-              <div class="tableText">EXPLOITABLE
-                DATA™
-              </div>
-            </td>
-            <td style="border:0px">
-              <img class="icon" src="{{imgDir}}Icon6.png">
-              <div class="tableNumers"> {{DarkWebData.Types.vip}}</div>
-              <div class="tableText">VIP
-              </div>
-            </td>
-          </tr>
+        <tr>
+          <td style="border:0px">
+            <img class="icon" src="{{imgDir}}Icon3.png">
+            <div class="tableNumers"> {{DarkWebData.Types.ExploitableData}}</div>
+            <div class="tableText">EXPLOITABLE 
+              DATA™
+            </div>
+          </td>
+          <td style="border:0px">
+            <img class="icon" src="{{imgDir}}Icon6.png">
+            <div class="tableNumers"> {{DarkWebData.Types.vip}}</div>
+            <div class="tableText">VIP
+            </div>
+          </td>
+        </tr>
       </table>
     </div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
+    <div class="grid-item">
+      <table>
+        <th class="sevirityCell" >SEVERITIES</th>
+        <tr>
+  
+          <div class="doughnut">
+            <canvas baseChart  height="120px" 
+            [labels]="doughnutChartLabels" 
+            [data]="[DarkWebData.Severities.High,DarkWebData.Severities.Medium,DarkWebData.Severities.Low]"
+            [chartType]="doughnutChartType"
+            [colors]="colors"
+            [options]="doughnutChartOptions"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  
+          </div>
+        </tr>
+        <tr>
+          <div class="inner-grid-container">
+            <div>
+              <div class="tableText" style="padding-left: 0px;">HIGH</div>
+              <div class="tableNumers">{{DarkWebData.Severities.High}}</div>
+            </div>
+            <div>
+              <div class="tableText" style="padding-left: 0px;">MEDIUM</div>
+              <div class="tableNumers">{{DarkWebData.Severities.Medium}}</div>
+            </div>
+            <div>
+              <div class="tableText" style="padding-left: 0px;">LOW</div>
+              <div class="tableNumers">{{DarkWebData.Severities.Low}}</div>
+            </div>
+          </div>
+        </tr>
+      </table>
+    </div>
+    <div class="grid-item">
+      <table>
+        <th>SOURCES</th>
+        <tr>
+  
+        </tr>
+      </table>
+    </div>
   </div>
