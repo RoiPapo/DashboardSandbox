@@ -6,7 +6,7 @@ import { Color } from 'ng2-charts';
   templateUrl: './clear-web.component.html',
   styleUrls: ['./clear-web.component.css']
 })
-export class ClearWebComponent implements OnChanges {
+export class ClearWebComponent  {
 
   @Input()
 
@@ -15,29 +15,15 @@ export class ClearWebComponent implements OnChanges {
   imgDir: string = "../assets/img/";
 
   // Doughnut
-  public chartDatasets: Array<any> = [
-    {
-      borderWidth: [0, 0, 0], data: [10, 20, 30],
-      backgroundColor: [
-        "#41b0d5",
-        "#f3ab10",
-        "#d54141"
-      ],
-    }
-  ];
   public doughnutChartLabels: string[] = ['High', 'Medium', 'low'];
   public doughnutChartType: string = 'doughnut';
-  public colors: Array<Color> = [{}];
+  public colors: any[]= [{ borderWidth:0, backgroundColor: ["#41b0d5", "#f3ab10", "#d54141", "#a4add3"] } ];
   public doughnutChartOptions: any = {
-    cutoutPercentage: 85,
+    borderWidth:0,
+    cutoutPercentage: 88,
     legend: {
-      position: 'bottom',
-      labels: {
-        fontColor: '#ffffff'
-      }
-
-
-    }
+      display: false
+     }
   }
   // events
   public chartClicked(e: any): void {
@@ -51,11 +37,5 @@ export class ClearWebComponent implements OnChanges {
   constructor() {
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    // only run when property "data" changed
-    if (changes['ClearWebData']) {
-      console.log(this.ClearWebData);
-    }
-  }
 
 }

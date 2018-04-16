@@ -5,7 +5,7 @@ body{
     font-size: 12px;
     color:white;
 }
-table {
+.types {
     display: table;
     border-collapse: separate;
     border-spacing: 0px;
@@ -22,10 +22,10 @@ th {
     text-align: center;
     background-color:#203c52;
 }
-tr td{
+.types tr td{
     border-bottom:1pt solid #203e56;
 }
-td {
+.types td {
     vertical-align: top;
     padding-left: 20px;
     padding-top: 15px;  
@@ -62,4 +62,26 @@ td {
     display: block;
     padding-left: 47px;
     margin-top: -16px;
+}
+
+.sevirityCell{
+    padding-right: 300px
+}
+.inner-grid-container {
+    display: grid;
+  
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+ 
+  }
+  .inner-grid-container > div {
+    padding-left: 45px;
+    padding-top: 28px;
+    margin-bottom: 10px;
+    
+  }
+  .doughnut{
+    display: block;
+    padding-top: 20px;
 }
