@@ -34,6 +34,12 @@ export class ClearWebComponent {
 
   }
 
+  getStyle() {
+    // snip snip -> fetch the url from somewhere
+    const style = `width:30%`;
+    return style;
+  }
+
   constructor() {
   }
 

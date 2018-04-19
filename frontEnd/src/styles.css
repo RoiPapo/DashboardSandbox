@@ -38,7 +38,7 @@ th {
   }
   .grid-item {
     background-color:#214a6b;
-    border-left: 10px solid #1c5079;
+    border-left: 2% solid #1c5079;
     border-right: 10px solid #1c5079;
     margin-bottom: 29px;
 
@@ -86,14 +86,26 @@ th {
     padding-top: 20px;
 }
   .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{
-    color:#000!important;background-color:#f1f1f1!important
+    color:#000!important;background-color:#1c374a!important;
+    width: 80%;
+    
+
 }
 
   .w3-round-xlarge{
-    border-radius:16px
+    border-radius:16px;
+    border-radius: 16px;
+    height: 6px;
+    
 }
 
 
   .w3-blue,.w3-hover-blue:hover{
-    color:#fff!important;background-color:#2196F3!important
+    color:#fff!important;background-color:#8bb5d5!important;
+
+}
+
+.sourcesContainer{
+    padding-top:25px;
+    padding-left:18px;
 }

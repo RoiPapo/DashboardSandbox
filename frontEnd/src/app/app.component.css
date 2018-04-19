@@ -14,10 +14,15 @@ body{
   .container{
     margin: auto;
     background-color: #1c5079;
-    padding: 70px;
+    padding-top: 90px;
+    padding-left:2%;
     position: absolute;
     top: 64px;
     bottom: 0px;
-    left:110px;
+    left: 6%;
+    right:8%;
     width: 77%;
+    min-width: 1350px;
   }
+
+  
