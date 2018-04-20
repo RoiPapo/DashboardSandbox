@@ -3,7 +3,7 @@
     <img src="{{imgDir}}clear-web.png">
   </div>
   <div class="grid-item">
-    <table class="types">
+    <table class="TableContent">
       <tr>
         <th>TYPES</th>
         <th></th>
@@ -57,12 +57,12 @@
     </table>
   </div>
   <div class="grid-item">
-    <table>
+    <table class="TableContent">
       <th class="sevirityCell">SEVERITIES</th>
       <tr>
 
         <div class="doughnut">
-          <canvas baseChart height="110px" 
+          <canvas baseChart height="110em" 
           [labels]="doughnutChartLabels" 
           [data]="[ClearWebData.Severities.High,ClearWebData.Severities.Medium,ClearWebData.Severities.Low]"
           [chartType]="doughnutChartType" 
@@ -92,7 +92,7 @@
     </table>
   </div>
   <div class="grid-item">
-    <table>
+    <table class="TableContent">
       <th >SOURCES (%)</th>
       <tr>
         <div class="sourcesContainer">
