@@ -11,12 +11,13 @@ body{
     border-spacing: 0px;
     border-color: grey;
 }
+
 th {
     display: table-cell;
-   padding-top: 5px;
+    padding-top: 5px;
     padding-left:20px;
-    padding-right:200px;
-    padding-bottom: 5px;
+    padding-right:19em;
+    padding-bottom: 4px;
     font-size: 12px;
     font-weight: lighter;
     text-align: center;
@@ -40,11 +41,12 @@ th {
     background-color:#214a6b;
     border-left: 2% solid #1c5079;
     border-right: 10px solid #1c5079;
-    margin-bottom: 29px;
+    margin-bottom: 18px;
 
   }
   .grid-item-logo {
     background-color:#1e5078;
+    padding-right: 15px;
   }
 
   .tableNumers{
@@ -65,7 +67,7 @@ th {
 }
 
 .sevirityCell{
-    padding-right: 300px
+    padding-right: 335px
 }
 .inner-grid-container {
     display: grid;
@@ -73,12 +75,13 @@ th {
     align-content: center;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
+    
  
   }
   .inner-grid-container > div {
     padding-left: 45px;
-    padding-top: 28px;
-    margin-bottom: 10px;
+    padding-top: 32px;
+    margin-bottom: 4px;
     
   }
   .doughnut{
@@ -87,8 +90,9 @@ th {
 }
   .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{
     color:#000!important;background-color:#1c374a!important;
-    width: 80%;
-    
+    width: 83%;
+    margin-top:3px; 
+    margin-bottom:16px;  
 
 }
 
@@ -96,6 +100,7 @@ th {
     border-radius:16px;
     border-radius: 16px;
     height: 6px;
+  
     
 }
 
@@ -106,6 +111,12 @@ th {
 }
 
 .sourcesContainer{
-    padding-top:25px;
+    padding-top:35px;
     padding-left:18px;
+}
+
+.sourcesText{
+    float: right;
+    margin-top: -28px;
+    padding-right: 7%;
 }

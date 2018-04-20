@@ -43,8 +43,8 @@
         <td style="border:0px">
           <img class="icon" src="{{imgDir}}Icon3.png">
           <div class="tableNumers"> {{ClearWebData.Types.ExploitableData}}</div>
-          <div class="tableText">EXPLOITABLE 
-            DATA™
+          <div class="tableText">EXPLOITABLE
+             DATA™
           </div>
         </td>
         <td style="border:0px">
@@ -58,16 +58,16 @@
   </div>
   <div class="grid-item">
     <table>
-      <th class="sevirityCell" >SEVERITIES</th>
+      <th class="sevirityCell">SEVERITIES</th>
       <tr>
 
         <div class="doughnut">
-          <canvas baseChart  height="120px" 
+          <canvas baseChart height="110px" 
           [labels]="doughnutChartLabels" 
           [data]="[ClearWebData.Severities.High,ClearWebData.Severities.Medium,ClearWebData.Severities.Low]"
-          [chartType]="doughnutChartType"
-          [colors]="colors"
-          [options]="doughnutChartOptions"
+          [chartType]="doughnutChartType" 
+          [colors]="colors" 
+          [options]="doughnutChartOptions" 
           (chartHover)="chartHovered($event)"
           (chartClick)="chartClicked($event)"></canvas>
 
@@ -93,22 +93,34 @@
   </div>
   <div class="grid-item">
     <table>
-      <th>SOURCES</th>
+      <th >SOURCES (%)</th>
       <tr>
-        <div class="sourcesContainer"> 
+        <div class="sourcesContainer">
+          <div class="tableText" style="padding-left: 0px;">APPLICATION STORES</div>
           <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-blue w3-round-xlarge"[style.width.%]="[ClearWebData.Sources.ApplicationStores]"> </div> 
-          </div><br>
+            <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[ClearWebData.Sources.ApplicationStores]"> </div>
+          </div>
+          <div class="tableText sourcesText">{{ClearWebData.Sources.ApplicationStores|round:0 }}</div>
+          <br>
+          <div class="tableText" style="padding-left: 0px;">SOCIAL MEDIA</div>
           <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-blue w3-round-xlarge"[style.width.%]="[ClearWebData.Sources.Others]"> </div>
-          </div><br>
+            <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[ClearWebData.Sources.SocialMedia]"> </div>
+          </div>
+          <div class="tableText sourcesText">{{ClearWebData.Sources.SocialMedia|round:0 }}</div>
+          <br>
+          <div class="tableText" style="padding-left: 0px;">PASTE SITES</div>
           <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-blue w3-round-xlarge"[style.width.%]="[ClearWebData.Sources.PasteSites]"> </div> 
-          </div><br>
+            <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[ClearWebData.Sources.PasteSites]"> </div>
+          </div>
+          <div class="tableText sourcesText">{{ClearWebData.Sources.PasteSites|round:0 }}</div>
+          <br>
+          <div class="tableText" style="padding-left: 0px;">OTHERS</div>
           <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-container w3-blue w3-round-xlarge"[style.width.%]="[ClearWebData.Sources.SocialMedia]"> </div> 
-          </div><br>
-       </div>   
+            <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[ClearWebData.Sources.Others]"> </div>
+          </div>
+          <div class="tableText sourcesText">{{ClearWebData.Sources.Others|round:0 }}</div>
+          <br>
+        </div>
       </tr>
     </table>
   </div>

@@ -1,5 +1,13 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Color } from 'ng2-charts';
+import { Pipe } from '@angular/core';
+
+@Pipe({ name: 'round' })
+export class RoundPipe {
+    transform(input: number) {
+        return Math.round(input);
+    }
+}
 
 @Component({
   selector: 'app-clear-web',

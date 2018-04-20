@@ -1,6 +1,6 @@
 <div class="grid-container" *ngIf="DarkWebData">
     <div class="grid-item-logo">
-      <img src="{{imgDir}}clear-web.png">
+      <img src="{{imgDir}}dark-web.png">
     </div>
     <div class="grid-item">
       <table class="types">
@@ -43,8 +43,8 @@
           <td style="border:0px">
             <img class="icon" src="{{imgDir}}Icon3.png">
             <div class="tableNumers"> {{DarkWebData.Types.ExploitableData}}</div>
-            <div class="tableText">EXPLOITABLE 
-              DATA™
+            <div class="tableText">EXPLOITABLE
+               DATA™
             </div>
           </td>
           <td style="border:0px">
@@ -58,16 +58,16 @@
     </div>
     <div class="grid-item">
       <table>
-        <th class="sevirityCell" >SEVERITIES</th>
+        <th class="sevirityCell">SEVERITIES</th>
         <tr>
   
           <div class="doughnut">
-            <canvas baseChart  height="120px" 
+            <canvas baseChart height="110px" 
             [labels]="doughnutChartLabels" 
             [data]="[DarkWebData.Severities.High,DarkWebData.Severities.Medium,DarkWebData.Severities.Low]"
-            [chartType]="doughnutChartType"
-            [colors]="colors"
-            [options]="doughnutChartOptions"
+            [chartType]="doughnutChartType" 
+            [colors]="colors" 
+            [options]="doughnutChartOptions" 
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"></canvas>
   
@@ -93,9 +93,34 @@
     </div>
     <div class="grid-item">
       <table>
-        <th>SOURCES</th>
+        <th>SOURCES (%)</th>
         <tr>
-  
+          <div class="sourcesContainer">
+            <div class="tableText" style="padding-left: 0px;">BLACK MARKETS</div>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[DarkWebData.Sources.BlackMarkets]"> </div>
+            </div>
+            <div class="tableText sourcesText">{{DarkWebData.Sources.BlackMarkets|round:0 }}</div>
+            <br>
+            <div class="tableText" style="padding-left: 0px;">HACKING FORUMES</div>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[DarkWebData.Sources.HackingForums]"> </div>
+            </div>
+            <div class="tableText sourcesText">{{DarkWebData.Sources.HackingForums|round:0 }}</div>
+            <br>
+            <div class="tableText" style="padding-left: 0px;">PASTE SITES</div>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[DarkWebData.Sources.PasteSites]"> </div>
+            </div>
+            <div class="tableText sourcesText">{{DarkWebData.Sources.PasteSites|round:0 }}</div>
+            <br>
+            <div class="tableText" style="padding-left: 0px;">OTHERS</div>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-container w3-blue w3-round-xlarge" [style.width.%]="[DarkWebData.Sources.Others]"> </div>
+            </div>
+            <div class="tableText sourcesText">{{DarkWebData.Sources.Others|round:0 }}</div>
+            <br>
+          </div>
         </tr>
       </table>
     </div>
