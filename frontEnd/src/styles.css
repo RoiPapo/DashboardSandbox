@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 1900px) and (max-height: 1199px) {
+    html {
+        zoom: 90%;
+    }
+ }
+ @media screen and (max-width: 1025px) and (max-height: 780px) {
+    html {
+        zoom: 62%;
+    }
+ }
 body{
     background-color: #192934;
     font-family: 'Open Sans', sans-serif;
