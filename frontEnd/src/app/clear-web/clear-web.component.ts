@@ -1,12 +1,11 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Color } from 'ng2-charts';
+import { Component, Input } from '@angular/core';
 import { Pipe } from '@angular/core';
 
 @Pipe({ name: 'round' })
 export class RoundPipe {
-    transform(input: number) {
-        return Math.round(input);
-    }
+  transform(input: number) {
+    return Math.round(input);
+  }
 }
 
 @Component({
@@ -19,7 +18,6 @@ export class ClearWebComponent {
   @Input()
 
   ClearWebData: {};
-
   imgDir: string = "../assets/img/";
 
   // Doughnut
@@ -42,11 +40,6 @@ export class ClearWebComponent {
 
   }
 
-  getStyle() {
-    // snip snip -> fetch the url from somewhere
-    const style = `width:30%`;
-    return style;
-  }
 
   constructor() {
   }

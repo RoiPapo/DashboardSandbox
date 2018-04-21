@@ -11,7 +11,8 @@ export class DarkWebComponent  {
 
   DarkWebData: {};
   imgDir: string = "../assets/img/";
- // Doughnut
+ 
+  // Doughnut
  public doughnutChartLabels: string[] = ['High', 'Medium', 'low'];
  public doughnutChartType: string = 'doughnut';
  public colors: any[]= [{ borderWidth:0, backgroundColor: ["#41b0d5", "#f3ab10", "#d54141", "#a4add3"] } ];
@@ -22,6 +23,7 @@ export class DarkWebComponent  {
      display: false
     }
  }
+ 
  // events
  public chartClicked(e: any): void {
 

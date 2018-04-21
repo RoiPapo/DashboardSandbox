@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
       .subscribe(
         data => {
           this.ParseJson(data)
-          console.log(data);
         },
 
         err => {

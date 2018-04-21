@@ -330,7 +330,6 @@ var AppComponent = /** @class */ (function () {
         this.requestService.getData()
             .subscribe(function (data) {
             _this.ParseJson(data);
-            console.log(data);
         }, function (err) {
             console.log(err);
         });
@@ -478,11 +477,6 @@ var ClearWebComponent = /** @class */ (function () {
     ClearWebComponent.prototype.chartClicked = function (e) {
     };
     ClearWebComponent.prototype.chartHovered = function (e) {
-    };
-    ClearWebComponent.prototype.getStyle = function () {
-        // snip snip -> fetch the url from somewhere
-        var style = "width:30%";
-        return style;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
